@@ -90,6 +90,8 @@
                 ((or (equal? 'cdr operator)
                      (equal? 'rest operator))
                  (cdr form))
+                ((equal? 'length operator)
+                 (length form))
                 (else (error "No such operator"))))
         form cexpr))
 
